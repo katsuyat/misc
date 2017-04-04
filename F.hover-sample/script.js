@@ -44,14 +44,13 @@ $(function(){
     evt.stopPropagation();
     evt.preventDefault();
     $('.dropbox-area').show();
-    //$('.dropbox-area').css('display', 'block');
     console.log('[out-area] drag enter');
   });
 
   $('.dropbox-area').on('dragleave', function(evt){
     evt.stopPropagation();
     evt.preventDefault();
-    $(this).hide("slow");
+    $(this).hide();
     console.log('[dropbox-area] drag enter')
   });
 
