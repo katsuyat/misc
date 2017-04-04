@@ -43,14 +43,15 @@ $(function(){
     evt.stopPropagation();
     evt.preventDefault();
     $('.dropbox-area').css('display', 'block');
-    console.log('[window] drag enter');
+    console.log('[out-area] drag enter');
   });
 
-  $(window).on('dragleave', function(evt){
+  $('.dropbox-area').on('dragleave', function(evt){
     evt.stopPropagation();
     evt.preventDefault();
-    $('.dropbox-area').css('display', 'none');
-    console.log('[window] drag end')
+    $(this).hide(5000);
+    //$('.dropbox-area').css('display', 'none');
+    console.log('[dropbox-area] drag enter')
   });
 
   $('.dropbox-area').on('dragover', handleDragOver);
