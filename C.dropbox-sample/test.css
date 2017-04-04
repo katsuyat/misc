@@ -1,0 +1,8 @@
+
+.dropbox-area{
+  border: 4px dotted rgba(33, 86, 246, 0.8);
+  width: 400px;
+  height:200px;
+  margin: 0 auto;
+  background-color: rgba(155, 171, 231, 0.5);
+}
