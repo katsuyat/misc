@@ -8,6 +8,7 @@ $(function(){
     var files = evt.originalEvent.dataTransfer.files;
 
     for(var i=0,f; f=files[i]; i++){
+      //MIME-type指定
       if (!f.type.match('image.*')){
         console.log('does not image');
         continue;
@@ -42,17 +43,18 @@ $(function(){
   $('.out-area').on('dragenter', function(evt){
     evt.stopPropagation();
     evt.preventDefault();
-    $('.dropbox-area').css('display', 'block');
+    $('.dropbox-area').show();
+    //$('.dropbox-area').css('display', 'block');
     console.log('[out-area] drag enter');
   });
 
   $('.dropbox-area').on('dragleave', function(evt){
     evt.stopPropagation();
     evt.preventDefault();
-    $(this).hide(5000);
-    //$('.dropbox-area').css('display', 'none');
+    $(this).hide("slow");
     console.log('[dropbox-area] drag enter')
   });
+
 
   $('.dropbox-area').on('dragover', handleDragOver);
   $('.dropbox-area').on('drop', handleFileSelect);
